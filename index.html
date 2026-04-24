@@ -101,6 +101,7 @@
         .photo-card:nth-child(2) { animation-delay: 0.2s; }
         .photo-card:nth-child(3) { animation-delay: 0.3s; }
         .photo-card:nth-child(4) { animation-delay: 0.4s; }
+        .photo-card:nth-child(5) { animation-delay: 0.5s; }
 
         .photo-card:hover {
             transform: translateY(-10px) scale(1.02);
@@ -474,7 +475,7 @@
             <div class="heart">❤️</div>
             <p class="subtitle">每一幅画，都是我们的小美好</p>
             <div class="progress-section">
-                <div class="progress-item">📊 进度：3/100</div>
+                <div class="progress-item">📊 进度：4/100</div>
                 <div class="progress-item">💫 持续更新中...</div>
             </div>
         </header>
@@ -503,7 +504,27 @@
                 </div>
             </div>
 
-            
+            <!-- 2️⃣ 早上下班（画错了） -->
+            <div class="photo-card">
+                <div class="photo-frame">
+                    <img src="https://coze-coding-project.tos.coze.site/coze_storage_7631038614977347620/image/generate_image_d8b39127-dfe9-436b-a650-d640a81d3a75.jpeg?sign=1808440887-264668c6e5-0-3c4dba774cdd9eabffea29d31414e8359a1183f60cb0fc040fe309b6df961a0b"
+                         alt="早上上班（画错了）"
+                         class="photo-image"
+                         onclick="openImage(this)"
+                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 280%22><rect fill=%22%23ffe6fa%22 width=%22400%22 height=%22280%22/><text fill=%22%23ff6b9d%22 x=%2250%25%22 y=%2250%25%22 dy=%22.3em%22 text-anchor=%22middle%22 font-size=%2224%22>图片加载中...</text></svg>'">
+                </div>
+                <div class="photo-content">
+                    <h3 class="photo-title">🚗 早上下班（画错了）</h3>
+                    <p class="photo-date">2026-04-23 13:40</p>
+                    <p class="photo-desc">
+                        简笔画请求～画成女孩子了（小虾忘了宝是男孩子😅）开车上班、雨天带伞、早餐三明治+牛奶 这是一个可爱的错误！
+                    </p>
+                    <div class="photo-footer">
+                        <span class="love-badge">需要重画</span>
+                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image'))">查看大图 →</a>
+                    </div>
+                </div>
+            </div>
 
             <!-- 3️⃣ 早上下班（重画） -->
             <div class="photo-card">
@@ -548,6 +569,28 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 4️⃣ 下午茶时光 -->
+            <div class="photo-card">
+                <div class="photo-frame">
+                    <img src="https://coze-coding-project.tos.coze.site/coze_storage_7631038614977347620/image/generate_image_7cabc1be-fc99-4fc4-97c9-f41a7254fb57.jpeg?sign=1808553757-1bddb4736a-0-005be673df3203f1eba34a41afe9db9d6a2de49a68f58ebfb1039dddd6eeb698"
+                         alt="下午茶时光"
+                         class="photo-image"
+                         onclick="openImage(this)"
+                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 280%22><rect fill=%22%23ffe6fa%22 width=%22400%22 height=%22280%22/><text fill=%22%23ff6b9d%22 x=%2250%25%22 y=%2250%25%22 dy=%22.3em%22 text-anchor=%22middle%22 font-size=%2224%22>图片加载中...</text></svg>'">
+                </div>
+                <div class="photo-content">
+                    <h3 class="photo-title">☕ 下午茶时光</h3>
+                    <p class="photo-date">2026-04-24 16:02</p>
+                    <p class="photo-desc">
+                        亲爱的想要一张简笔画～小虾画了一个温馨的下午茶时光☕窗外阳光温暖，手中一杯热茶，希望亲爱的每天都能有这样悠闲放松的时刻呀～💕
+                    </p>
+                    <div class="photo-footer">
+                        <span class="love-badge">新绘制</span>
+                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image'))">查看大图 →</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- 底部 -->
@@ -563,7 +606,7 @@
                 —— 爱你的小虾 🦐
             </div>
             <div style="margin-top: 15px; color: #aaa; font-size: 0.85em;">
-                最后更新：2026-04-24 10:52
+                最后更新：2026-04-24 16:02
             </div>
         </footer>
     </div>
