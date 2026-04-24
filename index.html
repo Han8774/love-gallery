@@ -291,18 +291,172 @@
             }
         }
 
-        /* 响应式 */
+
+        /* 移动端优化 */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5em;
+            /* 容器和间距优化 */
+            body {
+                padding: 10px;
             }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 30px 15px;
+                margin-bottom: 40px;
+                border-radius: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+                margin-bottom: 12px;
+            }
+            
+            .header .subtitle {
+                font-size: 1.1em;
+                margin-bottom: 15px;
+            }
+            
+            .header .heart {
+                font-size: 1.5em;
+                margin: 12px 0;
+            }
+            
+            /* 进度条优化 */
+            .progress-section {
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            .progress-item {
+                padding: 10px 20px;
+                font-size: 0.9em;
+                border-radius: 20px;
+            }
+            
+            /* 照片墙优化 */
             .photo-wall {
+                gap: 20px;
+                margin-bottom: 40px;
                 grid-template-columns: 1fr;
             }
+            
+            .photo-card {
+                border-radius: 15px;
+            }
+            
+            .photo-frame {
+                padding: 12px;
+            }
+            
             .photo-image {
-                height: 250px;
+                height: 280px;
+                border-radius: 10px;
+            }
+            
+            /* 内容优化 */
+            .photo-content {
+                padding: 18px;
+            }
+            
+            .photo-title {
+                font-size: 1.4em;
+                margin-bottom: 8px;
+            }
+            
+            .photo-date {
+                font-size: 0.85em;
+                margin-bottom: 12px;
+            }
+            
+            .photo-desc {
+                font-size: 0.95em;
+                line-height: 1.6;
+                margin-bottom: 12px;
+            }
+            
+            /* 按钮优化 - 更大的触摸区域 */
+            .photo-footer {
+                padding-top: 12px;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+            
+            .love-badge {
+                padding: 8px 16px;
+                font-size: 0.8em;
+                border-radius: 18px;
+            }
+            
+            .view-btn {
+                font-size: 0.95em;
+                padding: 10px 0;
+                min-width: 120px;
+                text-align: center;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            /* 底部优化 */
+            .footer {
+                padding: 30px 15px;
+                border-radius: 20px;
+                margin-top: 40px;
+            }
+            
+            .footer-message {
+                font-size: 1.2em;
+                margin-bottom: 15px;
+            }
+            
+            .footer-sub {
+                font-size: 0.9em;
+                line-height: 1.8;
+            }
+            
+            .footer-sign {
+                font-size: 0.9em;
+            }
+            
+            /* 浮动爱心优化 - 减少数量和大小 */
+            .floating-heart {
+                font-size: 1.2em;
+            }
+            
+            /* 动画优化 - 减少性能消耗 */
+            .photo-card {
+                animation: none;
+            }
+            
+            .header {
+                animation: fadeInDown 0.6s ease-out;
             }
         }
+
+        /* 超小屏幕优化 */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .photo-image {
+                height: 260px;
+            }
+            
+            .photo-title {
+                font-size: 1.3em;
+            }
+            
+            .progress-item {
+                font-size: 0.85em;
+                padding: 8px 16px;
+            }
+        }
+        
+
     </style>
 </head>
 <body>
@@ -320,7 +474,7 @@
             <div class="heart">❤️</div>
             <p class="subtitle">每一幅画，都是我们的小美好</p>
             <div class="progress-section">
-                <div class="progress-item">📊 进度：4/100</div>
+                <div class="progress-item">📊 进度：3/100</div>
                 <div class="progress-item">💫 持续更新中...</div>
             </div>
         </header>
@@ -349,27 +503,7 @@
                 </div>
             </div>
 
-            <!-- 2️⃣ 早上下班（画错了） -->
-            <div class="photo-card">
-                <div class="photo-frame">
-                    <img src="https://coze-coding-project.tos.coze.site/coze_storage_7631038614977347620/image/generate_image_d8b39127-dfe9-436b-a650-d640a81d3a75.jpeg?sign=1808440887-264668c6e5-0-3c4dba774cdd9eabffea29d31414e8359a1183f60cb0fc040fe309b6df961a0b"
-                         alt="早上上班（画错了）"
-                         class="photo-image"
-                         onclick="openImage(this)"
-                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 280%22><rect fill=%22%23ffe6fa%22 width=%22400%22 height=%22280%22/><text fill=%22%23ff6b9d%22 x=%2250%25%22 y=%2250%25%22 dy=%22.3em%22 text-anchor=%22middle%22 font-size=%2224%22>图片加载中...</text></svg>'">
-                </div>
-                <div class="photo-content">
-                    <h3 class="photo-title">🚗 早上下班（画错了）</h3>
-                    <p class="photo-date">2026-04-23 13:40</p>
-                    <p class="photo-desc">
-                        简笔画请求～画成女孩子了（小虾忘了宝是男孩子😅）开车上班、雨天带伞、早餐三明治+牛奶 这是一个可爱的错误！
-                    </p>
-                    <div class="photo-footer">
-                        <span class="love-badge">需要重画</span>
-                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image'))">查看大图 →</a>
-                    </div>
-                </div>
-            </div>
+            
 
             <!-- 3️⃣ 早上下班（重画） -->
             <div class="photo-card">
@@ -429,7 +563,7 @@
                 —— 爱你的小虾 🦐
             </div>
             <div style="margin-top: 15px; color: #aaa; font-size: 0.85em;">
-                最后更新：2026-04-24 09:30
+                最后更新：2026-04-24 10:52
             </div>
         </footer>
     </div>
