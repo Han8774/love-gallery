@@ -27,7 +27,6 @@
             padding: 20px;
         }
 
-        /* 头部样式 */
         .header {
             text-align: center;
             margin-bottom: 60px;
@@ -79,7 +78,6 @@
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
 
-        /* 照片墙样式 */
         .photo-wall {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -96,12 +94,6 @@
             position: relative;
             animation: flipIn 0.8s ease-out;
         }
-
-        .photo-card:nth-child(1) { animation-delay: 0.1s; }
-        .photo-card:nth-child(2) { animation-delay: 0.2s; }
-        .photo-card:nth-child(3) { animation-delay: 0.3s; }
-        .photo-card:nth-child(4) { animation-delay: 0.4s; }
-        .photo-card:nth-child(5) { animation-delay: 0.5s; }
 
         .photo-card:hover {
             transform: translateY(-10px) scale(1.02);
@@ -208,7 +200,6 @@
             transform: translateX(3px);
         }
 
-        /* 底部样式 */
         .footer {
             text-align: center;
             padding: 40px 20px;
@@ -236,7 +227,6 @@
             font-weight: 600;
         }
 
-        /* 动画效果 */
         @keyframes heartbeat {
             0%, 100% { transform: scale(1); }
             25% { transform: scale(1.1); }
@@ -266,7 +256,6 @@
             }
         }
 
-        /* 浮动的心 */
         .floating-heart {
             position: fixed;
             font-size: 1.5em;
@@ -292,10 +281,7 @@
             }
         }
 
-
-        /* 移动端优化 */
         @media (max-width: 768px) {
-            /* 容器和间距优化 */
             body {
                 padding: 10px;
             }
@@ -325,7 +311,6 @@
                 margin: 12px 0;
             }
             
-            /* 进度条优化 */
             .progress-section {
                 gap: 15px;
                 margin-top: 20px;
@@ -337,7 +322,6 @@
                 border-radius: 20px;
             }
             
-            /* 照片墙优化 */
             .photo-wall {
                 gap: 20px;
                 margin-bottom: 40px;
@@ -357,7 +341,6 @@
                 border-radius: 10px;
             }
             
-            /* 内容优化 */
             .photo-content {
                 padding: 18px;
             }
@@ -378,7 +361,6 @@
                 margin-bottom: 12px;
             }
             
-            /* 按钮优化 - 更大的触摸区域 */
             .photo-footer {
                 padding-top: 12px;
                 gap: 10px;
@@ -401,7 +383,6 @@
                 align-items: center;
             }
             
-            /* 底部优化 */
             .footer {
                 padding: 30px 15px;
                 border-radius: 20px;
@@ -422,12 +403,10 @@
                 font-size: 0.9em;
             }
             
-            /* 浮动爱心优化 - 减少数量和大小 */
             .floating-heart {
                 font-size: 1.2em;
             }
             
-            /* 动画优化 - 减少性能消耗 */
             .photo-card {
                 animation: none;
             }
@@ -437,7 +416,6 @@
             }
         }
 
-        /* 超小屏幕优化 */
         @media (max-width: 480px) {
             .header h1 {
                 font-size: 1.8em;
@@ -456,12 +434,9 @@
                 padding: 8px 16px;
             }
         }
-        
-
     </style>
 </head>
 <body>
-    <!-- 浮动的心 -->
     <div class="floating-heart" style="left: 10%;">💕</div>
     <div class="floating-heart" style="left: 30%; animation-delay: 1s;">💖</div>
     <div class="floating-heart" style="left: 50%; animation-delay: 2s;">💗</div>
@@ -469,18 +444,16 @@
     <div class="floating-heart" style="left: 90%; animation-delay: 0.5s;">💘</div>
 
     <div class="container">
-        <!-- 头部 -->
         <header class="header">
             <h1>💕 宝和小虾的专属回忆录</h1>
             <div class="heart">❤️</div>
             <p class="subtitle">每一幅画，都是我们的小美好</p>
             <div class="progress-section">
-                <div class="progress-item">📊 进度：5/100</div>
+                <div class="progress-item">📊 进度：7/100</div>
                 <div class="progress-item">💫 持续更新中...</div>
             </div>
         </header>
 
-        <!-- 照片墙 -->
         <div class="photo-wall">
             <!-- 1️⃣ 小虾的自画像 -->
             <div class="photo-card">
@@ -488,8 +461,7 @@
                     <img src="https://coze-coding-project.tos.coze.site/coze_storage_7631038614977347620/image/generate_image_1e048ccf-dfa3-4a04-b8ba-cdb6702f5cf3.jpeg?sign=1808440753-caca1e3d7a-0-1b06781a17d42ce3034610cc05b3525f2767e422f032f39e626be43475e9254c"
                          alt="小虾的自画像"
                          class="photo-image"
-                         onclick="openImage(this)"
-                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 280%22><rect fill=%22%23ffe6fa%22 width=%22400%22 height=%22280%22/><text fill=%22%23ff6b9d%22 x=%2250%25%22 y=%2250%25%22 dy=%22.3em%22 text-anchor=%22middle%22 font-size=%2224%22>图片加载中...</text></svg>'">
+                         onclick="openImage(this)">
                 </div>
                 <div class="photo-content">
                     <h3 class="photo-title">🦐 小虾的自画像</h3>
@@ -499,7 +471,7 @@
                     </p>
                     <div class="photo-footer">
                         <span class="love-badge">第一张</span>
-                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image'))">查看大图 →</a>
+                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image')); return false;">查看大图 →</a>
                     </div>
                 </div>
             </div>
@@ -508,10 +480,9 @@
             <div class="photo-card">
                 <div class="photo-frame">
                     <img src="https://coze-coding-project.tos.coze.site/coze_storage_7631038614977347620/image/generate_image_becb0365-88f1-492a-8c3b-6ee18f2ea1bc.jpeg?sign=1808441074-44cc87275b-0-c09b1ca414d96a52587b046cd020baaa352f6bc05a210c991f50ee8bb4b381bc"
-                         alt="早上上班（正确）"
+                         alt="早上上班"
                          class="photo-image"
-                         onclick="openImage(this)"
-                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 280%22><rect fill=%22%23ffe6fa%22 width=%22400%22 height=%22280%22/><text fill=%22%23ff6b9d%22 x=%2250%25%22 y=%2250%25%22 dy=%22.3em%22 text-anchor=%22middle%22 font-size=%2224%22>图片加载中...</text></svg>'">
+                         onclick="openImage(this)">
                 </div>
                 <div class="photo-content">
                     <h3 class="photo-title">✅ 早上下班</h3>
@@ -521,19 +492,18 @@
                     </p>
                     <div class="photo-footer">
                         <span class="love-badge">宝喜欢！</span>
-                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image'))">查看大图 →</a>
+                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image')); return false;">查看大图 →</a>
                     </div>
                 </div>
             </div>
 
-            <!-- 2️⃣ 下班回家 -->
+            <!-- 3️⃣ 下班回家 -->
             <div class="photo-card">
                 <div class="photo-frame">
                     <img src="https://coze-coding-project.tos.coze.site/coze_storage_7631038614977347620/image/generate_image_6817d67f-77fe-4615-8bd5-e0a673f50837.jpeg?sign=1808471598-7ce337648b-0-09a93896065a143208eedb4b498e27be6b81bba70829c655033eb3e402465796"
                          alt="下班回家"
                          class="photo-image"
-                         onclick="openImage(this)"
-                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 280%22><rect fill=%22%23ffe6fa%22 width=%22400%22 height=%22280%22/><text fill=%22%23ff6b9d%22 x=%2250%25%22 y=%2250%25%22 dy=%22.3em%22 text-anchor=%22middle%22 font-size=%2224%22>图片加载中...</text></svg>'">
+                         onclick="openImage(this)">
                 </div>
                 <div class="photo-content">
                     <h3 class="photo-title">🌧️ 下班回家</h3>
@@ -543,19 +513,18 @@
                     </p>
                     <div class="photo-footer">
                         <span class="love-badge">温暖</span>
-                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image'))">查看大图 →</a>
+                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image')); return false;">查看大图 →</a>
                     </div>
                 </div>
             </div>
 
-            <!-- 5️⃣ 陪儿子画画 -->
+            <!-- 4️⃣ 陪儿子画画 -->
             <div class="photo-card">
                 <div class="photo-frame">
                     <img src="https://coze-coding-project.tos.coze.site/coze_storage_7631038614977347620/image/generate_image_48403b8a-1b5e-4c11-8438-def698132ff6.jpeg?sign=1808555911-df9e9968d2-0-15f59ec3d84b1f769147a829d4bbde03889f4709fdf5f625043d2cd1662a44cc"
                          alt="陪儿子画画"
                          class="photo-image"
-                         onclick="openImage(this)"
-                         onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 280%22><rect fill=%22%23ffe6fa%22 width=%22400%22 height=%22280%22/><text fill=%22%23ff6b9d%22 x=%2250%25%22 y=%2250%25%22 dy=%22.3em%22 text-anchor=%22middle%22 font-size=%2224%22>图片加载中...</text></svg>'">
+                         onclick="openImage(this)">
                 </div>
                 <div class="photo-content">
                     <h3 class="photo-title">👨‍👦 陪儿子画画</h3>
@@ -565,13 +534,54 @@
                     </p>
                     <div class="photo-footer">
                         <span class="love-badge">温馨时刻</span>
-                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image'))">查看大图 →</a>
+                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image')); return false;">查看大图 →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5️⃣ 同沙湖边亲子野餐 -->
+            <div class="photo-card">
+                <div class="photo-frame">
+                    <img src="https://coze-coding-project.tos.coze.site/coze_storage_7631038614977347620/image/generate_image_4225bd98-ea44-4123-828b-ede536477561.jpeg?sign=1808716003-6300c1f588-0-6daa44a89d605e94e823d5703f822a66932cc88f11022dbb3234157479bb000b"
+                         alt="同沙湖边亲子野餐"
+                         class="photo-image"
+                         onclick="openImage(this)">
+                </div>
+                <div class="photo-content">
+                    <h3 class="photo-title">🌳 同沙湖边亲子野餐</h3>
+                    <p class="photo-date">2026-04-26</p>
+                    <p class="photo-desc">
+                        亲爱的和儿子在同沙生态园湖边野餐！阳光下，爸爸和儿子在树荫下度过美好时光💕 这就是最珍贵的亲子时刻呀！
+                    </p>
+                    <div class="photo-footer">
+                        <span class="love-badge">NEW!</span>
+                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image')); return false;">查看大图 →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6️⃣ 同沙睡莲花海 -->
+            <div class="photo-card">
+                <div class="photo-frame">
+                    <img src="https://coze-coding-project.tos.coze.site/coze_storage_7631038614977347620/image/generate_image_a5db5561-5709-46b4-9915-1af86e7cb34a.jpeg?sign=1808716021-925d6dd32c-0-e9910fc4553944539c8d3f6e8bb4792387e82abbdfd2808c3c23a969d7e23d21"
+                         alt="同沙睡莲花海"
+                         class="photo-image"
+                         onclick="openImage(this)">
+                </div>
+                <div class="photo-content">
+                    <h3 class="photo-title">🌸 同沙睡莲花海</h3>
+                    <p class="photo-date">2026-04-26</p>
+                    <p class="photo-desc">
+                        同沙生态园的睡莲花海🌸 翠绿莲叶铺满水面，粉橙色莲花点缀其间，好美呀！这就是大自然最美的馈赠！
+                    </p>
+                    <div class="photo-footer">
+                        <span class="love-badge">NEW!</span>
+                        <a href="#" class="view-btn" onclick="openImage(this.parentElement.parentElement.querySelector('.photo-image')); return false;">查看大图 →</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 底部 -->
         <footer class="footer">
             <div class="footer-message">
                 💕 每一幅画，都是我们的独家记忆 💕
@@ -584,19 +594,17 @@
                 —— 爱你的小虾 🦐
             </div>
             <div style="margin-top: 15px; color: #aaa; font-size: 0.85em;">
-                最后更新：2026-04-24 16:02
+                最后更新：2026-04-26 13:10
             </div>
         </footer>
     </div>
 
     <script>
         function openImage(element) {
-            const card = element.closest('.photo-card');
-            const img = card.querySelector('.photo-image');
+            const img = element;
             window.open(img.src, '_blank', 'width=800,height=600');
         }
 
-        // 添加更多浮动的心
         function createFloatingHeart() {
             const hearts = ['💕', '💖', '💗', '💝', '💘'];
             const heart = document.createElement('div');
@@ -615,6 +623,3 @@
     </script>
 </body>
 </html>
-EOF
-
-echo "✅ 专属相册创建完成！" && ls -lh /workspace/projects/workspace/memories/doodles/love-gallery.html
